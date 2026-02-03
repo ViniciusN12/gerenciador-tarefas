@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Tarefa</title>
+</head>
+<body>
+    <h1>Criar Nova Tarefa</h1>
+    <form th:action="@{/tarefas/salvar}" method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="PENDENTE">Pendente</option>
+            <option value="CONCLUIDA">Concluída</option>
+        </select>
+        <br>
+        <button type="submit">Salvar Tarefa</button>
+    </form>
+
+    <br>
+    <a href="/">Voltar para a lista de tarefas</a>
+</body>
+</html>

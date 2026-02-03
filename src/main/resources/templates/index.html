@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+    <ul>
+        <th:block th:each="tarefa : ${tarefas}">
+            <li th:text="${tarefa.titulo}">Título da tarefa</li>
+            <li th:text="${tarefa.status}">Status da tarefa</li>
+        </th:block>
+    </ul>
+
+    <a th:href="@{/tarefas/criar}">Criar Nova Tarefa</a>
+</body>
+</html>
